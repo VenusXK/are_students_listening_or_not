@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+<!--            拍摄-标题layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#222"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+<!--                拍摄-标题文字-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="拍摄画面"
+                    />
+            </LinearLayout>
+
+
+<!--            拍摄-画面-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:orientation="vertical">
+                <me.lake.librestreaming.ws.StreamLiveCameraView
+                    android:id="@+id/stream_previewView"
+                    android:background="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+
+<!--            分析-标题layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#222"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+<!--                分析-标题文字-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="yolov5 分析画面"
+                    />
+            </LinearLayout>
+
+            <!--分析-内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:background="#000"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/surface_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:text="此处子线程调用失败"
+                        />
+                    <io.vov.vitamio.widget.VideoView
+                        android:id="@+id/surface_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:background="#000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_rtmpback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#333"
+                        android:textColor="#fff"
+                        android:text="收流">
+
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    <!--            对比-标题layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#444"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+<!--                对比-标题文字-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="听课数据对比"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#555"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/data_l"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:text="听课人数数据占"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.01"
+                        android:background="#333"
+                        >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        >
+                        <TextView
+                            android:id="@+id/data_nl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:text="未听课人数数据"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+<!--            学习情况折线图-标题layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.14"
+                    android:orientation="vertical">
+<!--                学习情况折线图-标题文字-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.9"
+                        android:gravity="center"
+                        android:background="#555"
+                        android:textColor="#fff"
+                        android:text="学习情况折线图"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:background="#000"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:text="学习情况折线图"
+                        />
+<!--                    <com.github.mikephil.charting.charts.LineChart-->
+<!--                        android:id="@+id/chart"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
