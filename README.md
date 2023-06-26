@@ -102,7 +102,11 @@
 
 项目采用YOLO目标检测算法算法。目标检测算法能够在图像或视频中准确地定位和识别多个学生，YOLO开源算法与传统的目标检测方法相比具有更快的速度和更高的准确率，其在计算效率和准确性之间取得了很好的平衡，在许多计算机视觉应用中被广泛使用，该算法应用的技术路线图如下：
 
-![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/afdf2e27-53ee-4d3e-a915-9d7d84dc03d7)
+
+<div align="center">
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/afdf2e27-53ee-4d3e-a915-9d7d84dc03d7"/>
+</div>
+
 
 进行YOLO算法模型训练时，首先收集包含学生学习状态的视频数据集并对数据集进行标注，在获得教师和学生同意的情况下在授课期间进行学生学习情况的拍摄，共拍摄视频40余段，截取照片200余张，通过lable-img开源标注软件标注图像1200余框。
 
@@ -112,7 +116,9 @@
 
 项目采用MySQL数据库。数据库提供了一种结构化的数据存储方式，MySQL是一种开源的关系型数据库管理系统，使用SQL进行数据库管理，广泛用于各种应用开发,支持多种操作系统，提供高性能、可靠性和可伸缩性，MySQL数据库技术路线图如下：
 
- ![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/2fbf64c2-dc16-4cd1-944d-0032b88c923b)
+<div align="center">
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/2fbf64c2-dc16-4cd1-944d-0032b88c923b"/>
+</div>
 
 使用MySQL数据库时，首先实现相应的数据库连接语句，创建数据库和相关表，之后在YOLO模块的推理脚本中建立与数据库的连接，并进行必要的配置，在将推理分析数据写入数据库之前，将数据进行转换格式，之后使用MySQL数据库的相关语句修改Python推理脚本，将新的分析数据添加到数据库中，数据包含听课人数数据和未听课人数数据。
 
@@ -120,7 +126,9 @@
 
 本项目采用Nginx服务器作为推流服务器。Nginx是一款轻量级的Web 服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，且具有丰富插件，本项目利用其推流插件，实现对视频流进行存储和拉取，Nginx推流服务器路线图如下：
 
- ![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/bc994a2b-bd64-4df8-a692-63f8f531827a)
+<div align="center">
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/bc994a2b-bd64-4df8-a692-63f8f531827a"/>
+</div>
 
 搭建Nginx服务时，首先安装Nginx服务器并进行监听端口配置，通过设置不同监听端口配置两个独立的Nginx推流服务器实例，在计算机上同时运行两个推流中转服务。
 
@@ -128,7 +136,9 @@
 
 本项目采用WSLive作为推流模块。WSLive是一种流媒体服务平台，用于实时视频和音频传输。提供了一套完整的解决方案，包括推流、拉流、转码、存储和分发等功能,实现WSLive相关功能的技术路线图如下所示：
 
- ![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/9aca8135-4ac4-47e5-9f17-0a41b11b8a0f)
+<div align="center">
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/9aca8135-4ac4-47e5-9f17-0a41b11b8a0f"/>
+</div>
 
 开发实时软件进行集成直播推流功能时，通过开源模块WSLive将视频流传输到服务器，以便用户可以通过手机摄像头捕捉实时视频。推流功能集成后，进行推流参数设置，显示连接状态、帧率等推流状态信息。
 
@@ -136,7 +146,9 @@
 
 本项目采用MPAndroidChart库实现数据可视化。MPAndroidChart是一个在Android平台上用于绘制图表的开源库。它提供了丰富的图表类型，包括线形图、柱状图、饼图、雷达图和散点图等。MPAndroidChart具有灵活的配置选项，可以自定义图表的外观和交互方式，实现数据可视化的技术路线图如下：
 
- ![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/3718c075-6eaa-4ad5-93cb-5d14e21ec993)
+<div align="center">
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/3718c075-6eaa-4ad5-93cb-5d14e21ec993"/>
+</div>
 
 开发软件时进行集成可视化功能时，首先通过在项目的 Gradle 文件中添加库的依赖以在Android项目中引入MPAndroidChart库。之后通过编写DBHelper类文件访问数据库并准备和转换模型推理分析的数据，使其适合于图表展示。使用MPAndroidChart库提供的 API，创建各种类型的图表视图。通过更新数据集对象，添加数据点来实现数据更新和动态展示，之后调用相应的刷新方法更新图表视图。
 
