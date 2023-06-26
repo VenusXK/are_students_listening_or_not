@@ -95,7 +95,7 @@
 系统首先通过手机的WSLive模块捕获视频流，之后将视频流推送到Nginx服务器，之后YOLO视觉服务获取Nginx推流画面进行数据分析与处理，并将处理结果写入MySQL数据库，前端通过MPAndroidChart对数据进行可视化展示，系统整体的技术路线图如下所示：
 
 <div align="center">
-  ![image](https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/a531d693-629b-4c55-807f-240350219b99)
+  <img src="https://github.com/2023S3AI/Student-Learning-Status-in-Class/assets/92314675/a531d693-629b-4c55-807f-240350219b99"/>
 </div>
 
 ### YOLO架构技术路线
